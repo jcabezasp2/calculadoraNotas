@@ -10,10 +10,10 @@ public class Asignatura {
 	private double[] notasExamenes;
 	private double[] notasPracticas;
 	private double notaActitud;
-	private int[] formaDeHacerMedia;
+	private double[] formaDeHacerMedia = new double[3];
 	
 	
-	public Asignatura(String nombre, double[] notasExamenes, double[] notasPracticas, int valorExamenes,int valorPracticas, int valorActitud ) {
+	public Asignatura(String nombre, double[] notasExamenes, double[] notasPracticas, double valorExamenes,double valorPracticas, double valorActitud ) {
 		this.nombre = nombre;
 		this.notasExamenes = notasExamenes;
 		this.notasPracticas = notasPracticas;
@@ -59,37 +59,44 @@ public class Asignatura {
 	}
 	
 	private double calcularNotaFinal() {
+		double resultado;
+		double valorExamenes = getMediaExamenes() * formaDeHacerMedia[MEDIA_EXAMENES];
+		double valorPracticas = getMediaPracticas() * formaDeHacerMedia[MEDIA_PRACTICAS];
+		double valorActitud = notaActitud * formaDeHacerMedia[NOTA_ACTITUD];
 		
+		resultado = valorExamenes + valorPracticas + valorActitud;
+		
+		return resultado;
 	}
 	
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		
 		sb.append(this.nombre);
-		sb.append("\b Notas Examenes");
+		sb.append("\n Notas Examenes");
 		for(int i = 0;
 				i < this.notasExamenes.length;
 				i++) {
 			sb.append(this.notasExamenes[i]);
 			sb.append("\t");
 		}
-		sb.append("\bMedia examenes");
+		sb.append("\nMedia examenes");
 		sb.append(getMediaExamenes());
 		
-		sb.append("\b Notas practicas");
+		sb.append("\n Notas practicas");
 		for(int i = 0;
 				i < this.notasPracticas.length;
 				i++) {
 			sb.append(this.notasPracticas[i]);
 			sb.append("\t");
 			if(i % 6 == 0) {
-				sb.append("\b");
+				sb.append("\n");
 			}
 		}
-		sb.append("\bMedia Practicas");
+		sb.append("\nMedia Practicas");
 		sb.append(getMediaPracticas());
 		
-		sb.append("\bNota final");
+		sb.append("\nNota final");
 		sb.append(calcularNotaFinal());
 			
 		
