@@ -72,31 +72,33 @@ public class Asignatura {
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		
+		sb.append("\n");
 		sb.append(this.nombre);
-		sb.append("\n Notas Examenes");
+		sb.append("\n---------------------------");
+		sb.append("\nNotas Examenes ");
 		for(int i = 0;
 				i < this.notasExamenes.length;
 				i++) {
 			sb.append(this.notasExamenes[i]);
-			sb.append("\t");
+			sb.append(" ");
 		}
-		sb.append("\nMedia examenes");
-		sb.append(getMediaExamenes());
 		
-		sb.append("\n Notas practicas");
+		sb.append("\nNotas practicas ");
 		for(int i = 0;
 				i < this.notasPracticas.length;
 				i++) {
 			sb.append(this.notasPracticas[i]);
-			sb.append("\t");
-			if(i % 6 == 0) {
-				sb.append("\n");
-			}
+			sb.append(" ");
+			
 		}
-		sb.append("\nMedia Practicas");
+		sb.append("\nMedia examenes ");
+		sb.append(getMediaExamenes());
+		sb.append("\nMedia Practicas ");
 		sb.append(getMediaPracticas());
-		
-		sb.append("\nNota final");
+		sb.append("\nNota actitud ");
+		sb.append(this.notaActitud);
+		sb.append("\n====================");
+		sb.append("\nNOTA FINAL ");
 		sb.append(calcularNotaFinal());
 			
 		
