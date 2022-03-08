@@ -6,8 +6,8 @@ public class App {
 	public static void main(String[] args) {
 		//PROGRAMACION
 		double[] notasExamenesProgramacion = {10};
-		double[] notasPracticasProgramacion = {10, 10, 10, 10, 10, 10, 9.75, 9.5, 9.5, 10, 9.65, 9, 10, 10};
-		int notaActitudProgramacion = 9;
+		double[] notasPracticasProgramacion = {10, 10, 10, 10, 10, 10, 9.75, 9.5, 9.5, 10, 9.65, 9, 10, 10, 8};
+		int notaActitudProgramacion = 10;
 		Asignatura programacion = new Asignatura("Programacion", notasExamenesProgramacion, notasPracticasProgramacion, notaActitudProgramacion, 0.70, 0.20, 0.10);
 		
 		System.out.println(programacion.toString());
@@ -25,7 +25,7 @@ public class App {
 		//SISTEMAS INFORMATICOS
 		
 		double[] notasExamenesSistemas = {10};
-		double[] notasPracticasSistemas = {10, 10, 10, 10, 10, 10, 10, 10 };
+		double[] notasPracticasSistemas = {10, 10, 10, 10, 10, 10, 10, 10, 10};
 		int notaActitudSistemas = 8;
 		
 		Asignatura sistemas = new Asignatura("Sistemas informaticos", notasExamenesSistemas, notasPracticasSistemas, notaActitudSistemas, 0.70, 0.20, 0.10);
