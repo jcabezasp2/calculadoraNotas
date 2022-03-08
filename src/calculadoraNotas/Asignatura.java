@@ -13,11 +13,11 @@ public class Asignatura {
 	private double[] formaDeHacerMedia = new double[3];
 	
 	
-	public Asignatura(String nombre, double[] notasExamenes, double[] notasPracticas, double valorExamenes,double valorPracticas, double valorActitud ) {
+	public Asignatura(String nombre, double[] notasExamenes, double[] notasPracticas, double notaActitud, double valorExamenes,double valorPracticas, double valorActitud ) {
 		this.nombre = nombre;
 		this.notasExamenes = notasExamenes;
 		this.notasPracticas = notasPracticas;
-		this.notaActitud = 10;
+		this.notaActitud = notaActitud;
 		this.formaDeHacerMedia[MEDIA_EXAMENES] = valorExamenes;
 		this.formaDeHacerMedia[MEDIA_PRACTICAS] = valorPracticas;
 		this.formaDeHacerMedia[NOTA_ACTITUD] = valorActitud;
