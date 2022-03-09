@@ -34,9 +34,9 @@ public class App {
 		
 		//INGLES
 		
-		double[] notasExamenesIngles = { 7, 7.17};
+		double[] notasExamenesIngles = { 7, 7.17, 7.77, 7.95};
 		double[] notasPracticasIngles = {10};
-		int notaActitudIngles = 7;
+		int notaActitudIngles = 10;
 		
 		Asignatura ingles = new Asignatura("Ingles", notasExamenesIngles, notasPracticasIngles, notaActitudIngles, 0.90, 0.00, 0.10);
 		
